@@ -58,10 +58,10 @@ Run a new paired, language-stratified evaluation of B, k=3 and B, k=5 on 200 fre
 
 | pipeline | overall accuracy | weakest cell (language, condition) | accuracy there | lower | upper | annual cost |
 |---|---|---|---|---|---|---|
-| H | | | | | | |
-| L | | | | | | |
+| H | 0.866667 | RU, degraded | 0.666667 | 0.487797 | 0.807697 | 18863.20 |
+| L | 0.838889 | RU, degraded; KK, degraded (tie) | 0.733333 | 0.555517 | 0.858175 | 10800.00 |
 
-Personal-data pages per year sent abroad under H:
+Personal-data pages per year sent abroad under H: 992800
 
 ### 2b. Memo (at most 300 words)
 
