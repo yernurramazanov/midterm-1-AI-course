@@ -44,11 +44,13 @@ The assistant proposed the recommendation and written explanations as well as pe
 
 ### 1d. Decision (at most 150 words)
 
-Chosen candidate:
+Chosen candidate: B, k=5
 
-(Decision, using your intervals and the budget. Give the recall of your choice for EN, RU and KK separately.)
+I choose B, k=5: its annual model cost is $21007.22, below the $24600 budget. Both A candidates exceed the budget. B, k=5 retrieves the correct chunk for 46/60 questions (76.67%; Wilson interval 64.56–85.56%), compared with 31/60 for B, k=3 (51.67%; 39.31–63.83%). These intervals do not overlap, so B, k=5 is the stronger affordable option under the course rule. Its interval overlaps both A intervals, so those comparisons do not establish a winner. Recall by language is EN 17/20 = 85%, RU 15/20 = 75%, and KK 14/20 = 70%. Kazakh is served worst in this sample and represents 38% of production traffic. These small language samples warrant further evaluation. Retrieval recall alone does not establish final answer correctness.
 
 ### 1e. Next measurement (at most 60 words)
+
+Run a new paired, language-stratified evaluation of B, k=3 and B, k=5 on 200 fresh questions per language. Measure supported final-answer correctness and retrieval recall with Wilson intervals. If the extra chunks do not improve answer correctness, the cheaper candidate may become preferable; persistent Kazakh failures would motivate targeted retrieval changes.
 
 ## Part 2: A document pipeline you can defend
 
