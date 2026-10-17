@@ -9,11 +9,13 @@ Fingerprint: 956cbc4b
 
 ## AI-use declaration
 
-I used ChatGPT to read and clarify the repository instructions, run the supplied data generator with my GitHub username and session code, and help draft this file in English. ChatGPT used the GitHub connector to retrieve the README, generator and answer template. It ran Python in its execution environment to generate the synthetic data and calculate retrieval metrics, Wilson intervals, language-specific recall, annual costs and the numerical answers in Part 3.
+I used ChatGPT in agent mode with the GitHub plugin connected to my account to understand the assignment, generate my dataset and perform calculations. It also helped phrase my answers in English and save the work in separate commits.
 
-ChatGPT also helped compare affordable retrieval candidates, interpret overlapping intervals, identify the weakest document-processing groups, and formulate a memo about personal-data handling and checkable safeguards. It consulted primary research on hallucination bounds to check the distinction between arbitrary facts and rule-based tasks in Q4. The calculations use the supplied synthetic data; they are not measurements of a real bank or real model. The generator produced fingerprint 956cbc4b for yernurramazanov and zebra-28.
+Python was used to calculate recall, MRR, Wilson confidence intervals, and the annual costs of retrieval candidates and document pipelines. The assistant also suggested interpretations, recommendations and draft answers, including the explanations for Part 3. It consulted primary research to check the hallucination-bound question.
 
-The assistant proposed the recommendation and written explanations as well as performing calculations. This declaration therefore includes substantive AI assistance with analysis and writing, rather than translation alone. No other student's answers were used. This file is intended for my review and explanation during the oral check.
+My work involved working through the assignment and its results: I asked clarifying questions, studied explanations of the formulas and compared the options. I applied lecture knowledge about RAG, tokenization, request costs and personal-data protection. For example, I considered why high retrieval recall does not guarantee a correct final answer, and why hosting a server in Kazakhstan alone does not resolve every data-protection issue.
+
+I used my own dataset generated with my GitHub username and session code. I treated AI suggestions as support when reviewing results and making final decisions. The explanations helped me connect lecture material with the calculations and reasons for choosing the options.
 
 ## Part 1: Retrieval and cost decision
 
@@ -81,25 +83,25 @@ L costs $10800 annually for two servers versus H's $18863.20. It avoids routine 
 
 ### Q1
 
-Number:
-Why (at most 40 words):
+Number: 1.19 (KK/EN characters = 325/303 = 1.072607; bytes = 614/303 = 2.026403; tokens = 137/57 = 2.403509; token ratio / byte ratio = 1.186096).
+Why (at most 40 words): UTF-8 encoding accounts for part of the size increase, but tokens grow about 19% more than bytes. The premium therefore is not explained by encoding alone: this tokenizer segments the Kazakh sentence less efficiently.
 
 ### Q2
 
-Number:
-Why (at most 40 words):
+Number: 35.1% (EN: 768 × 263/256 = 789 e5 tokens; unseen share = (789 − 512)/789 × 100).
+Why (at most 40 words): Only English is truncated: its chunk has 789 e5 tokens, versus 384 for Russian and 228 for Kazakh. The final 277 English tokens are silently excluded from the embedding, so their content cannot contribute to retrieval similarity.
 
 ### Q3
 
-Number:
-Why (at most 40 words):
+Number: 54.3% (1 / (1 + exp(-0.3/0.7) + exp(-1.5/0.7) + exp(-2.1/0.7) + exp(-2.6/0.7))).
+Why (at most 40 words): Lowering temperature to 0.7 sharpens the distribution and increases the top token's probability. Positive temperature preserves the ranking. All five tokens still have positive probability; temperature alone does not remove tokens from the sampling set.
 
 ### Q4
 
-Number:
-Why (at most 40 words):
+Number: 31.5% ((289 × 34% + 289 × 29%) / (289 + 289)).
+Why (at most 40 words): I include account numbers and birthdays as arbitrary facts. Multiplication and arithmetic sequences have learnable rules, so I exclude them. Under the course's singleton-bound assumptions, a prompt saying “never invent a fact” does not change the pre-training evidence.
 
 ### Q5
 
-Number:
-Why (at most 40 words):
+Number: 12.30 ((1722 billion / 7 billion) / (1400 billion / 70 billion) = 246/20).
+Why (at most 40 words): The model uses 246 tokens per parameter, versus Chinchilla's 20. It is over-trained relative to that compute-optimal ratio. Chinchilla argued that models such as GPT-3 were under-trained: they used too little training data for their parameter counts.
