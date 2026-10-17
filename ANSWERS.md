@@ -65,6 +65,18 @@ Personal-data pages per year sent abroad under H: 992800
 
 ### 2b. Memo (at most 300 words)
 
+To: Head of Operations
+
+I recommend pipeline L with human review before extracted data affects payments. H achieves 156/180 = 86.67% overall accuracy; L achieves 151/180 = 83.89%. H's weakest group is degraded Russian scans: 20/30 = 66.67%, with a 95% Wilson interval of 48.78–80.77%. L has two equally weak groups, degraded Russian and degraded Kazakh: each 22/30 = 73.33%, interval 55.55–85.82%. Overall accuracy hides these failures. The overlapping weakest-cell intervals do not establish a difference between H and L, and 30 scans per cell leave substantial uncertainty.
+
+Under H, scans go to a foreign data centre and 992800 personal-data pages would leave Kazakhstan annually. The external service processes them, but its storage, subprocessors, logs, backups, training use and retention periods are unknown. These require documented investigation and compliance review before deployment; a vendor assurance alone is insufficient. Law No. 94-V covers the IIN.
+
+Under L, processing occurs on the bank's server in Kazakhstan, under bank control. We must still verify where files, outputs, logs and backups are stored, who can access them, and how long each copy remains. Local hosting alone does not resolve these questions.
+
+Use network egress restrictions and traffic audits to verify local processing; role-based access and audit logs to check access; encryption for stored and transmitted scans; and documented retention rules tested by deleting sample files and checking logs and backup expiry. Check totals, identifiers and dates against validation rules, and route degraded scans or failed checks to human reviewers.
+
+L costs $10800 annually for two servers versus H's $18863.20. It avoids routine foreign processing, but residual risks include extraction errors, unauthorised access, outages and human-review workload. Server prices exclude review and operational safeguards.
+
 ## Part 3: Explain your own numbers
 
 ### Q1
