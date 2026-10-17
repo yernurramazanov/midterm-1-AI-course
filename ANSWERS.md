@@ -37,10 +37,10 @@ The assistant proposed the recommendation and written explanations as well as pe
 
 | candidate | annual cost |
 |---|---|
-| A, k=3 | |
-| A, k=5 | |
-| B, k=3 | |
-| B, k=5 | |
+| A, k=3 | 28117.75 |
+| A, k=5 | 36655.71 |
+| B, k=3 | 18728.66 |
+| B, k=5 | 21007.22 |
 
 ### 1d. Decision (at most 150 words)
 
