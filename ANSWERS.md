@@ -1,15 +1,19 @@
 # Midterm 1: answers
 
-GitHub username:
-Session code:
-Fingerprint:
+GitHub username: yernurramazanov
+Session code: zebra-28
+Fingerprint: 956cbc4b
 
 > Fill in the three lines above from `my_data/DATA.md`. Do not rename headings or table columns: a script reads the numbers.
 > Write only in the empty cells and lines. Percentages as 0.78 or 78 %, money as plain numbers.
 
 ## AI-use declaration
 
-(About half a page: which assistants or tools you used and for what. If you used none, say so.)
+I used ChatGPT to read and clarify the repository instructions, run the supplied data generator with my GitHub username and session code, and help draft this file in English. ChatGPT used the GitHub connector to retrieve the README, generator and answer template. It ran Python in its execution environment to generate the synthetic data and calculate retrieval metrics, Wilson intervals, language-specific recall, annual costs and the numerical answers in Part 3.
+
+ChatGPT also helped compare affordable retrieval candidates, interpret overlapping intervals, identify the weakest document-processing groups, and formulate a memo about personal-data handling and checkable safeguards. It consulted primary research on hallucination bounds to check the distinction between arbitrary facts and rule-based tasks in Q4. The calculations use the supplied synthetic data; they are not measurements of a real bank or real model. The generator produced fingerprint 956cbc4b for yernurramazanov and zebra-28.
+
+The assistant proposed the recommendation and written explanations as well as performing calculations. This declaration therefore includes substantive AI assistance with analysis and writing, rather than translation alone. No other student's answers were used. This file is intended for my review and explanation during the oral check.
 
 ## Part 1: Retrieval and cost decision
 
