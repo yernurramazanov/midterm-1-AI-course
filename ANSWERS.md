@@ -21,17 +21,17 @@ The assistant proposed the recommendation and written explanations as well as pe
 
 | config | recall@1 | recall@3 | recall@5 | MRR@10 |
 |---|---|---|---|---|
-| A | | | | |
-| B | | | | |
+| A | 0.516667 | 0.766667 | 0.816667 | 0.634722 |
+| B | 0.366667 | 0.516667 | 0.766667 | 0.488770 |
 
 ### 1b. Recall and 95 % Wilson interval of each candidate (recall at its own k)
 
 | candidate | recall@k | lower | upper |
 |---|---|---|---|
-| A, k=3 | | | |
-| A, k=5 | | | |
-| B, k=3 | | | |
-| B, k=5 | | | |
+| A, k=3 | 0.766667 | 0.645635 | 0.855606 |
+| A, k=5 | 0.816667 | 0.700800 | 0.894423 |
+| B, k=3 | 0.516667 | 0.393076 | 0.638252 |
+| B, k=5 | 0.766667 | 0.645635 | 0.855606 |
 
 ### 1c. Annual model cost in USD
 
